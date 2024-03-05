@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pingvini</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
 
+div.scroll-container img {
+  padding: 10px;
+}
+</style>
+</head>
 <body>
 
-    <header>
-        <h1>Awesome Penguins Website</h1>
-    </header>
+<h2>Image Gallery With Horizontal Scroll</h2>
+<p>Use the horizontal scrollbar to see the other images.</p>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Penguins</a>
-        <a href="galery.html">Penguin Gallery</a>
-        <a href="about.html">Contact</a>
-    </nav>
+<div class="scroll-container">
+  <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+  <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+</div>
 
-
-    <footer>
-        <p>&copy; 2024 Awesome Penguins Website. All rights reserved.</p>
-    </footer>
+<p>Note that the images are of same size.</p>
 
 </body>
-
 </html>
