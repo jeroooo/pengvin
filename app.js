@@ -1,4 +1,4 @@
-const container = document.querySelector('.container');
+const container = document.querySelector('.scroll-container');
 
 const URL = 'https://dog.ceo/api/breeds/image/random'
 
