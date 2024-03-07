@@ -4,7 +4,7 @@ const URL = 'https://dog.ceo/api/breeds/image/random'
 
 // get the images
 
-function loadImages(numImages = 16){
+function loadImages(numImages = 8){
    let i=0;
     while(i<numImages){
     fetch('https://dog.ceo/api/breeds/image/random')
