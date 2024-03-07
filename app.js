@@ -7,7 +7,7 @@ const URL = 'https://dog.ceo/api/breeds/image/random'
 function loadImages(numImages = 8){
    let i=0;
     while(i<numImages){
-    fetch('https://dog.ceo/api/breeds/image/random')
+    fetch('https://source.unsplash.com/random/?penguin')
     .then(response=>response.json())
     .then(data=>{
     // console.log(data.message)
