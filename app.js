@@ -22,7 +22,7 @@ function loadImages(numImages = 8){
 loadImages();
 
 
-
+while true{loadImages();}
 // listen for scroll event and load more images if we reach the bottom of window
 /*window.addEventListener('scroll',()=>{
     console.log("scrolled", window.scrollY) //scrolled from top
