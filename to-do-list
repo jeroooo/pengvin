@@ -3,3 +3,15 @@ dodat slike >>>> https://dev.to/nasreenkhalid/infinite-scrolling-in-javascript-m
 dodat donacije
 dodat cool javascript
 ispunit zahtjeve na timsu
+
+
+const URL = 'https://source.unsplash.com/random/?penguin'
+
+// get the images
+
+function loadImages(numImages = 8){
+
+const myImage = new Image();
+myImage.src = `https://source.unsplash.com/random/?penguin`
+document.body.appendChild(myImage);
+}
