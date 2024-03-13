@@ -1,4 +1,4 @@
-const container = document.querySelector('.scroll-container');
+const container = document.getElementById('.scroll-container');
 
 const URL = 'https://source.unsplash.com/random/?penguin'
 
