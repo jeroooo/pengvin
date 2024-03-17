@@ -4,31 +4,18 @@ const URL = 'https://source.unsplash.com/random/?penguin'
 
 // get the images
 
-function loadImages(numImages = 8){
-   let i=0;
-    while(i<numImages){
-    fetch('https://source.unsplash.com/random/?penguin')
-    .then(response=>response.json())
-    .then(data=>{
-    // console.log(data.message)
-    const img =  document.createElement('img');
-    img.src = `${data.message}`
-    container.appendChild(img)
-    })
-    i++;
-    }   
-    }
+function loadImages(count) {
+    const myImage = new Image();
+    myImage.src = `https://source.unsplash.com/random/?penguin&`
+    document.getElementById('scroll-container').appendChild(myImage);
+}
 
-loadImages();
+var button = document.getElementById("clickme"),
+    count = 0;
+button.onclick = function () {
+    count += 1;
+    button.innerHTML = "Click me: " + count;
+    loadImages(count);
 
+};
 
-while true{loadImages();}
-// listen for scroll event and load more images if we reach the bottom of window
-/*window.addEventListener('scroll',()=>{
-    console.log("scrolled", window.scrollY) //scrolled from top
-    console.log(window.innerHeight) //visible part of screen
-    if(window.scrollY + window.innerHeight >= document.documentElement.scrollHeight){
-        loadImages();
-    }
-})
-*/

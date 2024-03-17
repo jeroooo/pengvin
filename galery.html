@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-#scroll-container {
-  background-color: #333;
-  overflow: auto;
-  white-space: nowrap;
-  padding: 10px;
-}
+        #scroll-container {
+            background-color: #333;
+            overflow: auto;
+            white-space: nowrap;
+            padding: 10px;
+        }
 
-div.scroll-container img {
-    size: 50%;
-  padding: 10px;
-}
-</style>
+        img {
+            max-width: 750px;
+            max-height: 750px;
+        }
+
+        button {
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
+            top: 0;
+            padding: 20px;
+            background: transparent;
+            text-shadow: 1px 1px 1px #202020;
+            font-family: "Lato", sans-serif;
+            font-size: 18pt;
+            border: 1px solid lightblue;
+            color: lightblue;
+            margin: 10px auto;
+            text-align: center;
+
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
     <link rel="stylesheet" href="style.css">
-    <title>Infinite Scrolling Javascript</title>
+    <title>Pingvini</title>
 </head>
+
 <body>
 
-  <header>
+    <header>
         <h1>Awesome Penguins Website</h1>
     </header>
 
@@ -33,21 +56,27 @@ div.scroll-container img {
     </nav>
 
 
-     <h2>Image Gallery With Horizontal Scroll</h2>
-<p>Use the horizontal scrollbar to see the other images.</p>
+    <h2>Slike pingvina</h2>
 
-<div id="scroll-container">
- 
-</div>
+    <button id="clickme">Click me: 0</button>
 
-<p>Note that the images are of same size.</p>
+    <div id="scroll-container">
+
+    </div>
+
+
+
+
+
 
     <script src="app.js"></script>
-</body>
-</html>
+
+
 
     <footer>
         <p>&copy; 2024 Awesome Penguins Website. All rights reserved.</p>
     </footer>
 
+</body>
 
+</html>
