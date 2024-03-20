@@ -5,10 +5,22 @@ const URL = 'https://source.unsplash.com/random/?penguin'
 // get the images
 
 function loadImages(count) {
-    const myImage = new Image();
-    myImage.src = `https://source.unsplash.com/random/?penguin&`
-    document.getElementById('scroll-container').appendChild(myImage);
+
+    fetch("https://source.unsplash.com/featured/?penguin") // Fetching a random penguin image from Unsplash
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch image");
+            }
+            return response.url; // Extracting the image URL from the response
+        })
+        .then(imageUrl => {
+            const img = document.createElement("img");
+            img.src = imageUrl;
+            img.alt = "Penguin";
+            document.getElementById('scroll-container').appendChild(img);
+        });
 }
+
 
 var button = document.getElementById("clickme"),
     count = 0;
